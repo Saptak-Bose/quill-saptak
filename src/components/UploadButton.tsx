@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Dialog, DialogContent, DialogTrigger } from "./ui/dialog";
 import { Button } from "./ui/button";
+import UploadDropzone from "./UploadDropzone";
 
 type Props = {};
 
@@ -22,7 +23,9 @@ export default function UploadButton({}: Props) {
         <Button>Upload PDF</Button>
       </DialogTrigger>
 
-      <DialogContent>Example content</DialogContent>
+      <DialogContent>
+        <UploadDropzone />
+      </DialogContent>
     </Dialog>
   );
 }

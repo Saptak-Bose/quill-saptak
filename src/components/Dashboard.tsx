@@ -15,8 +15,8 @@ export default function Dashboard({}: Props) {
   const [currentlyDeletingFile, setCurrentlyDeletingFile] = useState<
     string | null
   >(null);
-  const utils = trpc.useContext();
 
+  const utils = trpc.useContext();
   const { data: files, isLoading } = trpc.getUserFiles.useQuery();
   const { mutate: deleteFile } = trpc.deleteFile.useMutation({
     onSuccess: () => {
